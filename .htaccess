@@ -1,0 +1,7 @@
+Options +ExecCGI
+AddHandler cgi-script .pl
+IndexIgnore *
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.pl/$1 [L]

@@ -1,20 +1,5 @@
 #!/usr/bin/env perl
 
-# Twitter self-hosted image service by VirtualWolf
-# Based on Ryan Petrich's PHP-based one but rewritten in Perl using Mojolicious:
-# https://gist.github.com/rpetrich/627137
-#
-# Installation:
-# 0. Install Mojolicious (http://mojolicio.us - you may need to have your own Perl 
-#    installed using Perlbrew first (http://perlbrew.pl) if you're on a shared
-#    hosting service like Dreamhost and the like, in which case change the shebang
-#    in the first line of this script to point to where you installed your Perl).
-# 1. Copy this script and the included .htaccess to the root level of your web server.
-# 2. Create a "public" directory, you may or may not need to chmod 777 depending on the
-#    server setup.
-# 3. Add the following as a custom URL for image upload service in Tweetbot/etc.:
-#     http://yourdomain.com/upload?p=password
-
 use Mojolicious::Lite;
 use File::stat;
 my $password = 'password';

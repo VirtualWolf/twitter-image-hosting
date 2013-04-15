@@ -33,6 +33,9 @@ post '/upload' => sub {
             when ( 'image/gif' ) {
                 $file_extension = 'gif';
             };
+            when ( 'video/mp4' ) {
+                $file_extension = 'mp4';
+            };
         };
 
         my $filename = &get_random_filename;
